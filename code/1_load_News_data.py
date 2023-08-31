@@ -24,7 +24,18 @@ def list_files(dirpath):
 # In[3]:
 
 
-get_ipython().run_cell_magic('time', '', "json_list = []\ndirpath = 'us-financial-news-articles/'\nfor filePath in list_files(dirpath):\n    if filePath.endswith('.json'):\n        with open(filePath) as f:\n            for line in f:\n                data = json.loads(line)\n                json_list.append([data['published'],\n                                  data['thread']['site'],\n                                  data['title'], \n                                  data['text'],\n                                  data['url']])\n    ")
+json_list = []
+dirpath = 'us-financial-news-articles/'
+for filePath in list_files(dirpath):
+    if filePath.endswith('.json'):
+        with open(filePath) as f:
+            for line in f:
+                data = json.loads(line)
+                json_list.append([data['published'],
+                                  data['thread']['site'],
+                                  data['title'],
+                                  data['text'],
+                                  data['url']])
 
 
 # ## Make sure the length of json list matches the total files
@@ -89,4 +100,3 @@ df.head()
 
 
 #df.to_csv('us_financial_news_articles_2018.csv')
-
