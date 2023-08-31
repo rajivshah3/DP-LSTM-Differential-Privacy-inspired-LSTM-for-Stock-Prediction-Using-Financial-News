@@ -34,7 +34,7 @@ from scipy import stats
 # In[3]:
 
 
-df = pd.read_csv("D://NeurIPS Workshop/data/source_price.csv")
+df = pd.read_csv("./data/source_price.csv")
 
 wsj_var=np.var(df.wsj_mean_compound)
 cnbc_var=np.var(df.cnbc_mean_compound)
@@ -66,8 +66,8 @@ for i in range(0,n):
     df_noise['reuters_noise'][i]+=np.random.normal(mu,sigma_reuters)
     
 
-# df_noise.to_csv("D://NeurIPS Workshop/data/source_price_noise0.csv")
-dfn=pd.read_csv("D://NeurIPS Workshop/data/source_price_noise0.csv",index_col=0)  
+df_noise.to_csv("./data/source_price_noise0.csv")
+dfn=pd.read_csv("./data/source_price_noise0.csv",index_col=0)  
 
 df_1n=pd.DataFrame()
 df_1n['wsj']=dfn['wsj_noise']
@@ -337,7 +337,7 @@ y_train=y_train_t
 # In[11]:
 
 
-dataframe= pd.read_csv("D://NeurIPS Workshop/data/source_price.csv")
+dataframe= pd.read_csv("./data/source_price.csv")
 dataframe.columns=['date','wsj','cnbc','fortune','reuters','price']
 cols = ['price','wsj','cnbc','fortune','reuters']
 len_dataframe=dataframe.shape[0]
@@ -494,4 +494,3 @@ MSE=sum(squaredError) / len(squaredError)
 print("MSE",MSE)
 print('accuracy',accuracy)
 print('mean_error_percent',mean_error_percent)
-

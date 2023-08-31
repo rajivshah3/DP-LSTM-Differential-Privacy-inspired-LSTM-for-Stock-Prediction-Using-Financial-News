@@ -21,15 +21,15 @@ from numpy.linalg import det, inv
 # In[50]:
 
 
-L1_r=np.load('D://NeurIPS Workshop/stockdata/result2/L1_r.npy',allow_pickle=True)
+L1_r=np.load('./data/stockdata/result2/L1_r.npy',allow_pickle=True)
 L1_r=pd.DataFrame(L1_r)
 L1_r.columns=['index','stock','TRUE','predict','accuracy','MSE']
 
-L2_r=np.load('D://NeurIPS Workshop/stockdata/result2/L2_r.npy',allow_pickle=True)
+L2_r=np.load('./data/stockdata/result2/L2_r.npy',allow_pickle=True)
 L2_r=pd.DataFrame(L2_r)
 L2_r.columns=['index','stock','TRUE','predict','accuracy','MSE']
 
-L3_r=np.load('D://NeurIPS Workshop/stockdata/clean/451_nonews_r.npy',allow_pickle=True)
+L3_r=np.load('./data/stockdata/clean/451_nonews_r.npy',allow_pickle=True)
 L3_r=pd.DataFrame(L3_r)
 L3_r.columns=['index','stock','TRUE','predict','accuracy','MSE']
 
@@ -164,4 +164,3 @@ L2_a_451
 
 
 L2_r
-
