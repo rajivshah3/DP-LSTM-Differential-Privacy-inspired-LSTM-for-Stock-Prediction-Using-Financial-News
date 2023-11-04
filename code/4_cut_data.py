@@ -35,7 +35,7 @@ from scipy import stats
 
 
 from os import listdir
-file_list=listdir('D://NeurIPS Workshop/stockdata/Data')
+file_list=listdir('./stockdata/Data')
 print(len(file_list))
 file_list[0]
 
@@ -43,14 +43,14 @@ file_list[0]
 # In[51]:
 
 
-df_news = pd.read_csv("D://NeurIPS Workshop/data/source_price.csv")
+df_news = pd.read_csv("./data/source_price.csv")
 
 
 # In[66]:
 
 
 for i in range(0,len(file_list)):
-    temp='D://NeurIPS Workshop/stockdata/Data/'+str(file_list[i])
+    temp='./stockdata/Data/'+str(file_list[i])
     df=pd.read_csv(temp)
     df_new=pd.DataFrame()
     df_new['date']=df['Date']
@@ -62,7 +62,7 @@ for i in range(0,len(file_list)):
     df_cut['cnbc_mean_compound']=df_news['cnbc_mean_compound']
     df_cut['fortune_mean_compound']=df_news['fortune_mean_compound']
     df_cut['reuters_mean_compound']=df_news['reuters_mean_compound']
-    df_cut.to_csv('D://NeurIPS Workshop/stockdata/cutdata/'+str(file_list[i]))
+    df_cut.to_csv('./stockdata/cutdata/'+str(file_list[i]))
     if i%100==0:
         print(i)
 
@@ -85,7 +85,7 @@ df.head()
 
 def stock_loop (filename):
     
-    df = pd.read_csv('D://NeurIPS Workshop/stockdata/cutdata/'+str(filename))
+    df = pd.read_csv('./stockdata/cutdata/'+str(filename))
     df = df.drop(columns=['Unnamed: 0'])
     dataframe=df.copy()#for get test data
      
@@ -500,14 +500,14 @@ for i in range(0,m):
 # In[69]:
 
 
-df = pd.read_csv('D://NeurIPS Workshop/stockdata/cutdata/d_spy_A.csv')
+df = pd.read_csv('./stockdata/cutdata/d_spy_A.csv')
 df.head()
 
 
 # In[79]:
 
 
-dataframe= pd.read_csv("D://NeurIPS Workshop/data/source_price.csv")
+dataframe= pd.read_csv("./data/source_price.csv")
 dataframe.head()
 
 
@@ -521,4 +521,3 @@ dataframe.columns
 
 
 dataframe.columns=['date','price','wsj','cnbc','fortune','reuters']
-

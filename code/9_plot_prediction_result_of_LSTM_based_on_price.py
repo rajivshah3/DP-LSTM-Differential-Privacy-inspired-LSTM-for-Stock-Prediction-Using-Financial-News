@@ -21,17 +21,17 @@ from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 # In[2]:
 
 
-dataframe = pd.read_csv("D://NeurIPS Workshop/data/source_price.csv")
+dataframe = pd.read_csv("./data/source_price.csv")
 sp_ori=dataframe['Adj Close'][0:dataframe.shape[0]-1]
 print(len(sp_ori))
 
-sp_1dim_lstm=np.load('D://NeurIPS Workshop/stockdata/result2/sp_1dim_lstm.npy')
+sp_1dim_lstm=np.load('./data/stockdata/result/sp_1dim_lstm.npy')
 print(len(sp_1dim_lstm))
 
-sp_5dim=np.load('D://NeurIPS Workshop/stockdata/result2/sp_5dim.npy')
+sp_5dim=np.load('./data/stockdata/result/sp_5dim.npy')
 print(len(sp_5dim))
 
-sp_5dim_n01=np.load('D://NeurIPS Workshop/stockdata/result2/sp_5dim_n01.npy')
+sp_5dim_n01=np.load('./data/stockdata/result/sp_5dim_n01.npy')
 print(len(sp_5dim_n01))
 
 
@@ -73,5 +73,4 @@ plt.setp(ltext, fontsize=14)
 x=np.array([0.,  40.,  80., 120.])
 group_labels=['12/07/2017','02/06/2018', '04/05/2018','06/01/2018']
 plt.xticks(x,group_labels,fontsize=14,)
-plt.savefig('D://NeurIPS Workshop/plot/sp3.jpg',dpi = 200,bbox_inches='tight')
-
+plt.savefig('./plot/sp3.jpg',dpi = 200,bbox_inches='tight')

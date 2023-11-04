@@ -72,9 +72,9 @@ for i in range(0,9):
   avg_accuracy2.append(t2)
   avg_accuracy3.append(t3)
 
-np.save('D://NeurIPS Workshop/plot/L1_a_451_DP.npy',avg_accuracy1)
-np.save('D://NeurIPS Workshop/plot/L2_a_451_news.npy',avg_accuracy2)
-np.save('D://NeurIPS Workshop/plot/L3_a_451_nonews.npy',avg_accuracy3)
+np.save('./plot/L1_a_451_DP.npy',avg_accuracy1)
+np.save('./plot/L2_a_451_news.npy',avg_accuracy2)
+np.save('./plot/L3_a_451_nonews.npy',avg_accuracy3)
 
 
 # In[52]:
@@ -86,9 +86,9 @@ import pandas as pd
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 
-L1_a_451=np.load('D://NeurIPS Workshop/plot/L1_a_451_DP.npy',allow_pickle=True)
-L2_a_451=np.load('D://NeurIPS Workshop/plot/L2_a_451_news.npy',allow_pickle=True)
-L3_a_451=np.load('D://NeurIPS Workshop/plot/L3_a_451_nonews.npy',allow_pickle=True)
+L1_a_451=np.load('./plot/L1_a_451_DP.npy',allow_pickle=True)
+L2_a_451=np.load('./plot/L2_a_451_news.npy',allow_pickle=True)
+L3_a_451=np.load('./plot/L3_a_451_nonews.npy',allow_pickle=True)
 
 
 # In[32]:
@@ -143,7 +143,7 @@ leg = plt.gca().get_legend()
 ltext = leg.get_texts()
 plt.setp(ltext, fontsize=16)
 
-plt.savefig('D://NeurIPS Workshop/plot/big_real_0926_v0.jpg',dpi = 200,bbox_inches='tight')
+plt.savefig('./plot/big_real_0926_v0.jpg',dpi = 200,bbox_inches='tight')
 plt.margins(0,0)
 plt.show()
 

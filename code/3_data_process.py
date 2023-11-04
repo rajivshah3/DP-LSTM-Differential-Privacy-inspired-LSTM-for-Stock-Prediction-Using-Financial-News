@@ -11,7 +11,7 @@ import pandas as pd
 # In[3]:
 
 
-df = pd.read_csv("D://NeurIPS Workshop/data/us_financial_news_articles_2018_with_sentiment.csv",index_col=0)
+df = pd.read_csv("./data/us_financial_news_articles_2018_with_sentiment.csv",index_col=0)
 
 
 # In[4]:
@@ -32,7 +32,7 @@ for i in range(0,n):
   if i%10000==0:
 
     print(i)
-df2.to_csv('D://NeurIPS Workshop/data/sentiment.csv')
+df2.to_csv('./data/sentiment.csv')
 
 
 # In[15]:
@@ -63,10 +63,10 @@ print(dff3.shape)
 dff4=df2[(df2.source_name=='reuters.com')]
 print(dff4.shape)
 
-dff1.to_csv('D://NeurIPS Workshop/data/sentiment_wsj.csv')
-dff2.to_csv('D://NeurIPS Workshop/data/sentiment_cnbc.csv')
-dff3.to_csv('D://NeurIPS Workshop/data/sentiment_fortune.csv')
-dff4.to_csv('D://NeurIPS Workshop/data/sentiment_reuters.csv')
+dff1.to_csv('./data/sentiment_wsj.csv')
+dff2.to_csv('./data/sentiment_cnbc.csv')
+dff3.to_csv('./data/sentiment_fortune.csv')
+dff4.to_csv('./data/sentiment_reuters.csv')
 
 
 # In[32]:
@@ -78,7 +78,7 @@ dff1.head()
 # In[36]:
 
 
-sp = pd.read_csv("D://NeurIPS Workshop/data/SP500.csv")#,index_col=0)
+sp = pd.read_csv("./data/SP500.csv")#,index_col=0)
 sp=pd.DataFrame(sp)
 sp.shape
 
@@ -96,10 +96,10 @@ print(dff3g.shape)
 dff4g=dff4.groupby(['published_date']).agg(['mean'])
 print(dff4g.shape)
 
-dff1g.to_csv('D://NeurIPS Workshop/data/sentiment_wsj_groupday.csv')
-dff2g.to_csv('D://NeurIPS Workshop/data/sentiment_cnbc_groupday.csv')
-dff3g.to_csv('D://NeurIPS Workshop/data/sentiment_fortune_groupday.csv')
-dff4g.to_csv('D://NeurIPS Workshop/data/sentiment_reuters_groupday.csv')
+dff1g.to_csv('./data/sentiment_wsj_groupday.csv')
+dff2g.to_csv('./data/sentiment_cnbc_groupday.csv')
+dff3g.to_csv('./data/sentiment_fortune_groupday.csv')
+dff4g.to_csv('./data/sentiment_reuters_groupday.csv')
 
 
 # In[40]:
@@ -111,10 +111,10 @@ dff1g.columns
 # In[37]:
 
 
-d1 = pd.read_csv("D://NeurIPS Workshop/data/sentiment_wsj_groupday1.csv")#,index_col=0)
-d2 = pd.read_csv("D://NeurIPS Workshop/data/sentiment_cnbc_groupday1.csv")
-d3 = pd.read_csv("D://NeurIPS Workshop/data/sentiment_fortune_groupday1.csv")
-d4 = pd.read_csv("D://NeurIPS Workshop/data/sentiment_reuters_groupday1.csv")
+d1 = pd.read_csv("./data/sentiment_wsj_groupday1.csv")#,index_col=0)
+d2 = pd.read_csv("./data/sentiment_cnbc_groupday1.csv")
+d3 = pd.read_csv("./data/sentiment_fortune_groupday1.csv")
+d4 = pd.read_csv("./data/sentiment_reuters_groupday1.csv")
 d1=pd.DataFrame(d1)
 d1.head()
 
@@ -187,15 +187,15 @@ for i in range(0,d4.shape[0]):
 # In[17]:
 
 
-# d1.to_csv("D://NeurIPS Workshop/data/sentiment_wsj_groupday2.csv")
-# d2.to_csv('D://NeurIPS Workshop/data/sentiment_cnbc_groupday2.csv')
-# d3.to_csv('D://NeurIPS Workshop/data/sentiment_fortune_groupday2.csv')
-# d4.to_csv('D://NeurIPS Workshop/data/sentiment_reuters_groupday2.csv')
+# d1.to_csv("./data/sentiment_wsj_groupday2.csv")
+# d2.to_csv('./data/sentiment_cnbc_groupday2.csv')
+# d3.to_csv('./data/sentiment_fortune_groupday2.csv')
+# d4.to_csv('./data/sentiment_reuters_groupday2.csv')
 
-np.save('D://NeurIPS Workshop/data/d1.npy',d1)
-np.save('D://NeurIPS Workshop/data/d2.npy',d2)
-np.save('D://NeurIPS Workshop/data/d3.npy',d3)
-np.save('D://NeurIPS Workshop/data/d4.npy',d4)
+np.save('./data/d1.npy',d1)
+np.save('./data/d2.npy',d2)
+np.save('./data/d3.npy',d3)
+np.save('./data/d4.npy',d4)
 
 
 # In[30]:
@@ -401,15 +401,15 @@ date_union_1.shape
 # In[87]:
 
 
-date_union_3.to_csv("D://NeurIPS Workshop/data/date_union_3.csv")
-date_union_2.to_csv('D://NeurIPS Workshop/data/date_union_2.csv')
-date_union_1.to_csv('D://NeurIPS Workshop/data/date_union_1.csv')
-date_union_4.to_csv('D://NeurIPS Workshop/data/sdate_union_4.csv')
+date_union_3.to_csv("./data/date_union_3.csv")
+date_union_2.to_csv('./data/date_union_2.csv')
+date_union_1.to_csv('./data/date_union_1.csv')
+date_union_4.to_csv('./data/sdate_union_4.csv')
 
-np.save('D://NeurIPS Workshop/data/date_union_1.npy',date_union_1)
-np.save('D://NeurIPS Workshop/data/date_union_2.npy',date_union_2)
-np.save('D://NeurIPS Workshop/data/date_union_3.npy',date_union_3)
-np.save('D://NeurIPS Workshop/data/date_union_4.npy',date_union_4)
+np.save('./data/date_union_1.npy',date_union_1)
+np.save('./data/date_union_2.npy',date_union_2)
+np.save('./data/date_union_3.npy',date_union_3)
+np.save('./data/date_union_4.npy',date_union_4)
 
 
 # In[88]:
@@ -438,6 +438,5 @@ from scipy import stats
 # In[147]:
 
 
-data = pd.read_csv("D://NeurIPS Workshop/data/source_price.csv",index_col=0)
+data = pd.read_csv("./data/source_price.csv",index_col=0)
 data.head(50)
-

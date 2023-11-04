@@ -46,7 +46,7 @@ prediction_len=1
 dense_output=1
 drop_out=0
 
-dataframe = pd.read_csv("D://NeurIPS Workshop/data/source_price.csv")
+dataframe = pd.read_csv("./data/source_price.csv")
 cols = ['Adj Close','wsj_mean_compound','cnbc_mean_compound','fortune_mean_compound',
           'reuters_mean_compound']
 
@@ -280,4 +280,3 @@ MSE=sum(squaredError) / len(squaredError)
 print("MSE",MSE)
 print('accuracy',accuracy)
 print('mean_error_percent',mean_error_percent)
-

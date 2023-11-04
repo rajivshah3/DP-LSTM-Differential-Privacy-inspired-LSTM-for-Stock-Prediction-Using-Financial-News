@@ -46,7 +46,7 @@ prediction_len=1
 dense_output=1
 drop_out=0
 
-dataframe = pd.read_csv("D://NeurIPS Workshop/data/source_price.csv")
+dataframe = pd.read_csv("./data/source_price.csv")
 cols = ['Adj Close']
 
 len_dataframe=dataframe.shape[0]
@@ -225,4 +225,3 @@ MSE=sum(squaredError) / len(squaredError)
 print("MSE",MSE)
 print('accuracy',accuracy)
 print('mean_error_percent',mean_error_percent)
-

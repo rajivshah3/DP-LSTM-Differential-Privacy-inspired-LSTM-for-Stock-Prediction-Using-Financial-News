@@ -462,7 +462,7 @@ for i in range(0,len_pre_win):
       m=m+1
 print(de_predicted)
 
-# np.save('D://NeurIPS Workshop/stockdata/result2/sp_5dim_n01_7030.npy',de_predicted)
+# np.save('./stockdata/result2/sp_5dim_n01_7030.npy',de_predicted)
 
 
 # In[18]:
